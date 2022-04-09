@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './style.css';
 import axios from 'axios';
+import QuoteCard from './components/QuoteCard';
 
 const SampleQuote = {
   quote: 'By chilling my loins I increase the chances of impregnating my wife.',
