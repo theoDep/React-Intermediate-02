@@ -4,7 +4,7 @@ import './style.css';
 import axios from 'axios';
 import QuoteCard from './components/QuoteCard';
 
-const SampleQuote = {
+const SampleData = {
   quote: 'By chilling my loins I increase the chances of impregnating my wife.',
   character: 'Apu Nahasapeemapetilon',
   image:
@@ -13,10 +13,11 @@ const SampleQuote = {
 };
 
 export default function App() {
+  const [data, setData] = useState(SampleData);
+  const { quote, character, image } = data;
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <QuoteCard quote={quote} character={character} image={image} />
     </div>
   );
 }

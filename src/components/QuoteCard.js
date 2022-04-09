@@ -1,7 +1,8 @@
 import React from 'react';
 import './QuoteCard.css';
 
-const QuoteCard = ({ quote, character, image }) => (
+const QuoteCard = ({ quote, character, image } = props) => {
+  return (
   <figure className="QuoteCard">
     <img src={image} alt={character} />
     <figcaption>
@@ -9,6 +10,7 @@ const QuoteCard = ({ quote, character, image }) => (
       <cite>{character}</cite>
     </figcaption>
   </figure>
-);
+  )
+};
 
 export default QuoteCard;
