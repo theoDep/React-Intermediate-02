@@ -18,6 +18,9 @@ export default function App() {
   return (
     <div>
       <QuoteCard quote={quote} character={character} image={image} />
+      <button type="button" onClick={getData}>
+        Get Data
+      </button>
     </div>
   );
 }
