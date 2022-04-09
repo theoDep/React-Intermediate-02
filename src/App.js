@@ -15,11 +15,19 @@ const SampleData = {
 export default function App() {
   const [data, setData] = useState(SampleData);
   const { quote, character, image } = data;
+  const getData = () => {
+    axios
+      .get('https://simpsons-quotes-api.herokuapp.com/quotes')
+      .then((response) => response.data)
+      .then((data) => {
+        setData(data[0]);
+      });
+  };
   return (
     <div>
       <QuoteCard quote={quote} character={character} image={image} />
       <button type="button" onClick={getData}>
-        Get Data
+        Get Random Quote
       </button>
     </div>
   );
